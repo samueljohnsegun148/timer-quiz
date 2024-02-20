@@ -54,4 +54,67 @@ function getQuestion() {
       // display the choice button on the page *
       document.getElementById('choices').innerHTML = choicesContainer.join('');
     }
+
+
+function questionClick() {
+    // identify the targeted button that was clicked o
+    let selected = `input[name=answer${currentQuestionIndex}]:checked`;
+
+    // if the clicked element is not a choice button, do nothing., else do something
+    let userAnswer = (document.querySelector(selected) || {}).value;
+
+    // check if user guessed wrong
+    if (!(userAnswer === questions[currentQuestionIndex].answer)) {
+        
+        // if they got the answer wrong, penalize time by subtracting 15 seconds from the timer
+        // recall the timer is the score they get at the end
+        time -= 15;
+        
+        // if they run out of time (i.e., time is less than zero) set time to zero so we can end quiz
+        if (time <= 0) {
+            time = 0;
+        }
+        
+        // display new time on page
+        document.getElementById('time').innerHTML = time;
+    
+        // play "wrong" sound effect
+        sfxWrong.play();
+    
+        // display "wrong" feedback on page
+        document.getElementById('feedback').innerHTML = `<p class="blinkText" style="color:red"> Wrong Choice!</p>`;
+        
+    } else {
+    
+        // play "right" sound effect
+        sfxRight.play();
+    
+        // display "right" feedback on page by displaying the text "Correct!" in the feedback element
+        // flash right feedback on page for half a second
+        document.querySelector('#feedback').innerHTML = `<p class = "blinkText" style="color:green"> Correct !</p>`
+    }
+
+    // set the feedback element to have the class of "feedback"
+    document.querySelector('#feedback').setAttribute("class", "feedback");
+    
+    // after one second, remove the "feedback" class from the feedback element
+    setTimeout(() => {
+    document.querySelector('.feedback').setAttribute("class", "feedback hide")
+    }, 1000);
+    
+    currentQuestionIndex++;
+    
+    // check if we've run out of questions
+    // if the time is less than zero and we have reached the end of the questions array,
+    // call a function that ends the quiz (quizEnd function)
+    if ((currentQuestionIndex === questions.length) || time === 0) {
+    console.log("end quizooo");
+    quizEnd();
+    } else {
+        // or else get the next question
+        // move to next question
+        getQuestion();
+    }
+    
+}
   
