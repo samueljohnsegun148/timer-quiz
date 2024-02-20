@@ -117,4 +117,32 @@ function questionClick() {
     }
     
 }
+
+// define the steps of the QuizEnd function...when the quiz ends...
+function quizEnd() {
+    // stop the timer
+    clearInterval(timerId);
+  
+    // show end screen
+    let endScreenEl = document.getElementById('end-screen');
+    endScreenEl.style.display = "block";
+    // show final score
+  
+    // hide the "questions" section
+    questionsEl.style.display = "none";
+  }
+  
+  // add the code in this function to update the time, it should be called every second
+  function clockTick() {
+    // right here - update time
+    time--;
+    
+    // update the element to display the new time value
+    document.getElementById('time').innerHTML = time;
+  
+    // check if user ran out of time; if so, call the quizEnd() function
+    if (time == 0) {
+      quizEnd();
+    }
+  }
   
