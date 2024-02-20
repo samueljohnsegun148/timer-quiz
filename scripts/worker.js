@@ -145,4 +145,42 @@ function quizEnd() {
       quizEnd();
     }
   }
+
+
+// complete the steps to save the high score
+function saveHighScore() {
+
+    // get the value of the initials input box
+    let nameInitials = document.getElementById('initials').value.trim();
+  
+    // make sure the value of the initials input box wasn't empty
+    if (nameInitials !== "") {
+  
+      // if it is not, check and see if there is a value of high scores in local storage
+      let highScores = JSON.parse(window.localStorage.getItem(
+        "highscores")) || [];
+  
+      // if there isn't any, then create a new array to store the high score
+    // add the new initials and high score to the array
+    let newScore = {
+      score: time,
+      initials: nameInitials,
+    };
+   
+    highScores.push(newScore);
+    
+    // convert the array to a piece of text
+    // store the high score in local storage
+     // otherwise, if there are high scores stored in local storage,
+    // retrieve the local storage value that has the high scores,
+    // convert it back to an array,
+    // add the new initials and high score to the array,
+    // then convert the array back to a piece of text,
+    // then store the new array (converted to text) back in local storage
+    window.localStorage.setItem("highscores", JSON.stringify(highScores));
+    // finally, redirect the user to the high scores page.
+    alert("Your Score has been Submitted");
+    }
+  }
+  
   
