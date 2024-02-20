@@ -15,4 +15,4 @@ To have an idea of it works, you may want to play with [this demo  to see how it
 ## Collaboration
 
 You are welcome to improve this project. To clone this repository, use ``` git clone  X```, 
-where X is the link to my repository for this work [link](https://github.com/samueljohnsegun148/timer-quiz.git).
+where X is the [link](https://github.com/samueljohnsegun148/timer-quiz.git) to my repository for this work.
