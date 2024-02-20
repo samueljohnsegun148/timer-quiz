@@ -10,8 +10,8 @@ let questionsEl = document.getElementById('questions');
 let questionEl = document.getElementById('question-title');
 let questionTl = document.getElementById('question-title');
 // reference the sound effects
-let sfxRight = new Audio('assets/sfx/correct.wav');
-let sfxWrong = new Audio('assets/sfx/incorrect.wav');
+let sfxRight = new Audio('resources/sfx/correct.wav');
+let sfxWrong = new Audio('resources/sfx/incorrect.wav');
 let startScreenEl = document.getElementById('start-screen');
 let startBtn = document.querySelector('#start');
 
