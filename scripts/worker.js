@@ -183,4 +183,29 @@ function saveHighScore() {
     }
   }
   
+
+// use this function when the user presses the "enter" key when submitting high score initials
+function checkForEnter(event) {
+    // if the user presses the enter key, then call the saveHighscore function
+    if(event.key === "Enter") {
+      saveHighScore();
+      alert("Your Score has been Submitted");
+    }
+  }
+  
+  // user clicks button to submit initials
+  let submitBtn = document.querySelector('#submit');
+  submitBtn.onclick = saveHighScore;
+  
+  // user clicks button to start quiz
+  startBtn.addEventListener('click', startQuiz);
+  
+  // user clicks on an element containing choices
+  let choicesEl = document.querySelector('.choices');
+  choicesEl.onclick = questionClick;
+  
+  
+  // user clicks enter to submit;
+  initialsEl.onkeyup = checkForEnter;
+  
   
