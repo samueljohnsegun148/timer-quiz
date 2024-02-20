@@ -13,5 +13,6 @@ To have an idea of it works []
 
 ## Collaboration
 
-You are welcome to improve this project. To clone this repository, use ``` git clone  X```, [where X is the link to the repo](git@github.com:samueljohnsegun148/timer-quiz.git). You may want to play with [this demo](https://samueljohnsegun148.github.io/timer-quiz/) to see how it works.
+You are welcome to improve this project. To clone this repository, use ``` git clone  X```, 
+[where X is the link to the repo](git@github.com:samueljohnsegun148/timer-quiz.git). You may want to play with [this demo  to see how it works](https://samueljohnsegun148.github.io/timer-quiz/).
 
