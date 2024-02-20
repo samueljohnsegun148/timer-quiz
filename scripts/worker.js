@@ -16,21 +16,14 @@ let startScreenEl = document.getElementById('start-screen');
 let startBtn = document.querySelector('#start');
 
 function startQuiz() {
-    // hide start screen
-   
+    // hide start scree
     startScreenEl.style.display = "none";
-  
     // un-hide questions section
     questionsEl.style.display = "block";
-  
     // start timer
     timerId = setInterval(clockTick, 1000);
-   
-    
-  
     // show starting time
     document.getElementById('time').innerHTML = time;
-  
     // call a function to show the next question
     getQuestion();
   }
