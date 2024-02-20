@@ -9,10 +9,10 @@ Segun Samuel, Developer - February 2024
 
 ## Testing
 
-To have an idea of it works []
+To have an idea of it works, you may want to play with [this demo  to see how it works](https://samueljohnsegun148.github.io/timer-quiz/).
+
 
 ## Collaboration
 
 You are welcome to improve this project. To clone this repository, use ``` git clone  X```, 
-where X is the repo [link](https://github.com/samueljohnsegun148/timer-quiz.git). You may want to play with [this demo  to see how it works](https://samueljohnsegun148.github.io/timer-quiz/).
-
+where X is the link to my repository for this work [link](https://github.com/samueljohnsegun148/timer-quiz.git).
